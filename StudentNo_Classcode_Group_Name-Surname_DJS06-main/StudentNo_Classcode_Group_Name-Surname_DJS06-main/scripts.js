@@ -12,35 +12,35 @@ const names = ['Ashwin', 'Sibongile', 'Jan-Hendrik', 'Sifiso', 'Shailen', 'Frikk
 // Create a new array that contains the length of each name
 // Method Used: Array.prototype.map()
 // Function: name => name.length calculates the length of each name
-const nameLengths = names.map(name => name.length);
-console.log(nameLengths);
+const lenghtOfName = names.map(name => name.length);
+console.log(lenghtOfName);
 
 // Sort the provinces alphabetically
 // Method Used: Array.prototype.sort()
 // The spread operator ... creates a shallow copy of the provinces array before sorting it
-const sortedProvinces = [...provinces].sort(); // Using spread to avoid mutating the original array
-console.log(sortedProvinces);
+const sortProvincesAlphabetically = [...provinces].sort(); // Using spread to avoid mutating the original array
+console.log(sortedProvincesAlphabetically);
 
 // Filter to remove provinces containing "Cape" and log the count of remaining provinces
 // Method Used: Array.prototype.filter()
 // Function: province => !province.includes('Cape') checks if the province name does not include "Cape"
-const filteredProvinces = provinces.filter(province => !province.includes('Cape'));
-console.log(filteredProvinces.length);
+const filterProvinces = provinces.filter(province => !province.includes('Cape'));
+console.log(filterProvinces.length);
 
 // Create a boolean array to determine if a name contains the letter 'S'
 // Method Used: Array.prototype.map()
 // Function: name => name.toLowerCase().includes('s') converts each name to lowercase and checks if it includes 's'
-const namesContainS = names.map(name => name.toLowerCase().includes('s'));
-console.log(namesContainS);
+const namesContainLetterS = names.map(name => name.toLowerCase().includes('s'));
+console.log(namesContainLetterS);
 
 // Use reduce to transform the names array into an object mapping names to their respective provinces
 // Method Used: Array.prototype.reduce()
 // reduce() accumulates the results into an object where each name is a key and the corresponding province (based on index) is the value
-const nameProvinceMapping = names.reduce((acc, name, index) => {
+const mapNameProvince = names.reduce((acc, name, index) => {
   acc[name] = provinces[index];
   return acc;
 }, {});
-console.log(nameProvinceMapping);
+console.log(mapNameProvince);
 
 // Log each name
 // Method Used: Array.prototype.forEach()
